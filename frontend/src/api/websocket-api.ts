@@ -111,7 +111,7 @@ const resetHandlers = () => {
 function createChannel() {
   resetHandlers();
   ws?.close();
-  ws = new WebSocket('ws://localhost:5050');
+  ws = new WebSocket(`wss://${process.env.REACT_APP_BACKEND_DOMAIN ?? 'localhost:5050'}/`);
   ws.addEventListener('open', openHandler);
   ws.addEventListener('close', closeHandler);
   ws.addEventListener('message', messageHandler);
