@@ -1,0 +1,10 @@
+@import "../../../../../theme/variables.scss";
+
+.column {
+  border-radius: 3px;
+  background-color: $colorBackgroundDark1;
+  width: 282px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

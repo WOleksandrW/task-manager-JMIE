@@ -1,0 +1,63 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.dropdown-block {
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: background-color .3s ease,
+              color .3s ease;
+
+  &:hover {
+    background-color: $colorPrimaryLight2;
+    color: $colorPrimaryDark;
+  }
+
+  .arrow-icon {
+    font-size: 1.6rem;
+    transition: transform .3s ease;
+  }
+
+  &.active {
+    background-color: $colorPrimaryLight2;
+    color: $colorPrimaryDark;
+
+    .arrow-icon {
+      transform: rotateZ(-180deg);
+    }
+  }
+}
+
+.node {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  bottom: -5px;
+  transform: translate(0, 100%);
+  width: 350px;
+  z-index: 21;
+
+  @include mediaTablet {
+    width: 300px;
+  }
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}

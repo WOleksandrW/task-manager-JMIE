@@ -1,0 +1,26 @@
+@import "../../../../../theme/variables.scss";
+
+.display {
+  padding: 10px;
+  list-style-position: inside;
+  border-radius: 5px;
+  font-size: 1.6rem;
+
+  a {
+    text-decoration: underline;
+    color: $colorDisplayLink;
+  }
+
+  ol > li {
+    list-style-type: decimal;
+  }
+
+  ul > li {
+    list-style-type: disc;
+  }
+
+  * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

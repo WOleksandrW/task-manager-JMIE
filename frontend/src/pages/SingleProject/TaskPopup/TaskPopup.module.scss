@@ -1,0 +1,215 @@
+@import "../../../theme/variables.scss";
+@import "../../../theme/mixins.scss";
+
+.task-popup {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  min-height: 500px;
+  gap: 5px;
+
+  @include mediaDesktopSmall {
+    width: 700px;
+    padding: 20px;
+  }
+
+  @include mediaTablet {
+    width: 400px;
+    padding: 15px;
+  }
+
+  @include mediaMobile {
+    width: 300px;
+  }
+}
+
+.loader {
+  top: 0;
+  left: 0;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+
+  .task-code {
+    font-size: 1.6rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+  }  
+}
+
+.copy-block {
+  margin-left: 10px;
+  height: 20px;
+  display: flex;
+
+  .copy-input {
+    display: none;
+  }
+
+  .copy-button {
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color .2s ease;
+  
+    svg {
+      font-size: 2rem;
+    }
+  
+    &:hover,
+    &.copied {
+      color: $colorPrimary;
+    }
+
+    &:hover + .copy-text--copy {
+      width: 100%;
+      transition: width .2s .2s ease;
+    }
+
+    &.copied + .copy-text--copied {
+      width: 0%;
+    }
+  }
+
+  .copy-text--copy,
+  .copy-text--copied {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 3px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    color: $colorPrimary;
+    font-size: 1.4rem;
+  }
+
+  .copy-text--copy {
+    width: 0%;
+    transition: width .2s ease;
+  }
+
+  .copy-text--copied {
+    width: 100%;
+    transition: width 0s 3s ease;
+  }
+}
+
+.btn-menu {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.popup-content {
+  display: flex;
+  gap: 20px;
+
+  @include mediaDesktopSmall {
+    gap: 10px;
+  }
+
+  @include mediaTablet {
+    flex-direction: column-reverse;
+    overflow: auto;
+    max-height: 500px;
+  }
+}
+
+.main-content {
+  width: 60%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mediaDesktopSmall {
+    width: 50%;
+    gap: 15px;
+  }
+
+  @include mediaTablet {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .editable-form-container {
+    width: 100%;
+  }
+
+  .editable-form {
+    height: 50px;
+  }
+
+  .editable-text,
+  .editable-input {
+    font-size: 2.4rem;
+  }
+
+  @include scrollbar($maxHeight: 500px);
+}
+
+.aside-content  {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+
+  @include mediaDesktopSmall {
+    width: 50%;
+  }
+  
+  @include mediaTablet {
+    width: 100%;
+  }
+
+  @include mediaMobile {
+    gap: 5px;
+  }
+}
+
+.info-line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @include mediaTablet {
+    justify-content: flex-end;
+  }
+
+  .star {
+    font-size: 2.4rem;
+    color: $colorStarNotedActive;
+  }
+}
+
+.select-panel {
+  width: 150px;
+  position: relative;
+  z-index: 5;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

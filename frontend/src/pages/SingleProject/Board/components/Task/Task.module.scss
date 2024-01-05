@@ -1,0 +1,106 @@
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.task {
+  position: relative;
+  width: 270px;
+  padding: 12px;
+  background-color: $colorBackground;
+  border-radius: 3px;
+  box-shadow: $boxShadowItem;
+  transition: background-color ease .5s;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .btn-more {
+      visibility: visible;
+    }
+  }
+
+  .btn-more {
+    visibility: hidden;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+    &.active {
+      visibility: visible;
+    }
+
+    @include mediaTablet {
+      visibility: visible;
+      right: 5px;
+    }
+  }
+
+  .title {
+    margin-right: 40px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    color: $colorContent;
+  }
+
+  .info-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $colorContentLight1;
+
+    .info {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .task-icon {
+        width: 24px;
+        height: 24px;
+        color: $colorIconTask;
+      }
+    }
+
+    .sub-info {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .icon-block {
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon-done {
+        font-size: 1.6rem;
+        color: $colorIconDone;
+      }
+
+      .star {
+        font-size: 2rem;
+        color: $colorStarNotedActive;
+      }
+
+      .avatar {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $colorBackgroundDark1;
+    box-shadow: $boxShadowItemHover;
+  }
+}
+
+.loader {
+  border-radius: 5px;
+  @include preloader-block();
+}

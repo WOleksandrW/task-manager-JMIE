@@ -1,0 +1,103 @@
+
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.details-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include mediaMobile {
+    gap: 5px;
+  }
+}
+
+.title {
+  padding: 10px;
+  border: 1px solid $colorBorder;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px;
+  border-radius: 5px;
+
+  @include mediaTablet {
+    gap: 15px;
+    padding: 0;
+  }
+
+  @include mediaMobile {
+    gap: 10px;
+  }
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &-title {
+    width: 75px;
+    font-size: 1.6rem;
+
+    .row {
+      display: block;
+    }
+  }
+
+  @include mediaTablet {
+    gap: 10px;
+  }
+}
+
+.priority-block {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  .input {
+    width: 70px;
+    height: 35px;
+    text-align: center;
+  }
+}
+
+.assign-block {
+  position: relative;
+  width: 200px;
+
+  @include mediaMobile {
+    width: 170px;
+  }
+}
+
+.assign-btn {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  width: fit-content;
+  cursor: pointer;
+  transition: color .3s ease;
+  font-size: 1.4rem;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.author-block {
+  width: 200px;
+
+  @include mediaMobile {
+    width: 170px;
+  }
+}

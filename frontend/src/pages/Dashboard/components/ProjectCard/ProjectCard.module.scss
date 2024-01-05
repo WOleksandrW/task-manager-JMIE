@@ -1,0 +1,110 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 240px;
+  min-width: 240px;
+  border-left: 20px solid $colorPrimaryLight2;
+  border-radius: 3px;
+  background-color: $colorBackground;
+  box-shadow: $boxShadowItem;
+  padding-top: 8px;
+  transition: box-shadow .1s ease;
+
+  &:hover {
+    box-shadow: $boxShadowItemHover;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: -12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 180px;
+}
+
+.avatar {
+  align-self: flex-start;
+}
+
+.title-link,
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: $colorContent;
+  cursor: pointer;
+  transition: color .3s ease;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $colorContent;
+}
+
+.actions {
+  border-top: 1px solid $colorBorderLight1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 15px 5px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $colorContentLight1;
+  margin-left: 5px;
+}
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 3px;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  color: $colorContent;
+  cursor: pointer;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $colorBackgroundDark1;
+  }
+
+  &:active {
+    background-color: $colorPrimaryLight3;
+  }
+}
+
+.preloader {
+  @include preloader-block($left: -20px, $width: calc(100% + 20px));
+}

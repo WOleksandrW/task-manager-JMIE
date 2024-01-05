@@ -1,0 +1,90 @@
+@import "../../../../theme/variables.scss";
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+
+  .row > * {
+    padding: 4px 8px;
+    border-bottom: 2px solid $colorBorderLight1;
+    text-align: left;
+  }
+
+  th, td {
+    word-wrap: break-word;
+    max-width: 200px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $colorContent;
+  }
+
+  th {
+    user-select: none;
+  }
+
+  .sortable-cell {
+    transition: background-color ease .3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $colorBackgroundDark2;
+    }
+
+    .content {
+      display: flex;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .star-icon {
+    font-size: 1.4rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .project {
+    &-star,
+    &-title,
+    &-key,
+    &-description,
+    &-author {
+      font-weight: 500;
+      color: $colorContentLight1;
+    }
+
+    &-star {
+      width: 4%;
+    }
+
+    &-title {
+      width: 22%;
+    }
+
+    &-key {
+      width: 8%;
+    }
+
+    &-description {
+      width: 25%;
+    }
+
+    &-author {
+      width: 16%;
+    }
+
+    &-menu {
+      width: 4%;
+    }
+  }
+
+}
+
+.empty {
+  margin-top: 40px;
+}

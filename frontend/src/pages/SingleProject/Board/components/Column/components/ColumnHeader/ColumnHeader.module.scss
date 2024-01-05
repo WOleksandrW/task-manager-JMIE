@@ -1,0 +1,81 @@
+@import "../../../../../../../theme/variables.scss";
+@import "../../../../../../../theme/mixins.scss";
+
+.column-header {
+  height: 50px;
+  padding: 0 5px;
+  background-color: $colorBackgroundDark1;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  position: relative;
+  z-index: 5;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &[draggable="true"] {
+      cursor: grab;
+    }
+
+    .editable-form-container {
+      width: 100%;
+    }
+
+    .editable-form {
+      height: 46px;
+    }
+
+    .editable-text {
+      text-transform: uppercase;
+    }
+  }
+
+  &.sticky {
+    position: sticky;
+    z-index: 15;
+    top: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      height: 2px;
+      width: 100%;
+      background-color: $colorBackgroundDark2;
+    }
+  }
+
+  &:hover {
+    .btn-more {
+      visibility: visible;
+    }
+  }
+
+  .btn-more {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    background-color: $colorBackgroundDark1;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+    }
+
+    @include mediaTablet {
+      visibility: visible;
+    }
+  }
+
+  .icon-done {
+    font-size: 1.4rem;
+    color: $colorIconDone;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,232 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.popup {
+  max-width: 450px;
+  width: 100%;
+  overflow: hidden;
+
+  @include mediaTablet {
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  @include mediaMobile {
+    max-width: 350px;
+    padding: 10px;
+  }
+
+  @include mediaMobileMedium {
+    max-width: 300px;
+  }
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include mediaMobile {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.logo {
+  background-image: url("../../assets/icons/logo.png");
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 3rem;
+  display: flex;
+  align-items: flex-end;
+
+  @include mediaMobile {
+    justify-content: center;
+  }
+}
+
+.title-letter {
+  font-size: 4rem;
+  line-height: 110%;
+  color: $colorPrimary;
+}
+
+.title-text {
+  display: inline-block;
+  overflow: hidden;
+  width: 0%;
+
+  &.first,
+  &.second,
+  &.third,
+  &.forth {
+    animation-name: logoAnimation;
+    max-width: fit-content;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+
+  &.first {
+    animation-delay: 2s;
+  }
+
+  &.second {
+    animation-delay: 2.3s;
+  }
+
+  &.third {
+    animation-delay: 2.6s;
+  }
+
+  &.forth {
+    animation-delay: 2.7s;
+  }
+}
+
+.subtitle {
+  color: $colorContent;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+
+  @include mediaTablet {
+    margin-bottom: 10px;
+  }
+}
+
+.loader,
+.message-bg {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.message-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $colorBackground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.message {
+  color: $colorPrimary;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: black;
+
+  .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $colorOverlayBack;
+    z-index: 5;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/auth-background-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  @include mediaMobile {
+    row-gap: 8px;
+  }
+}
+
+.input-block {
+  position: relative;
+}
+
+.input {
+  padding: 15px 40px 15px 15px;
+
+  @include mediaTablet {
+    padding: 10px 40px 10px 10px;
+  }
+}
+
+.btn-eye {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: none;
+  background-color: transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: $colorContentLight1;
+  transition: color .3s ease;
+
+  &:hover {
+    color: $colorPrimaryLight1;
+  }
+
+  &:active {
+    color: $colorPrimaryDark;
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 0;
+
+  @include mediaMobile {
+    padding: 10px 0;
+  }
+}
+
+.link {
+  color: $colorContent;
+  transition: all 200ms ease-in;
+  font-size: 1.5rem;
+
+  &:hover{
+    color: $colorPrimaryLight1;
+  }
+}
+
+@keyframes logoAnimation {
+  from { width: 0%; margin-right: 0px; }
+  30% { margin-right: 10px; }
+  to { width: 100%; margin-right: 10px; }
+}

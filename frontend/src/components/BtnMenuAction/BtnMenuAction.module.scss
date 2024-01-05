@@ -1,0 +1,47 @@
+@import "../../theme/variables.scss";
+
+.menu {
+  position: relative;
+
+  .active-btn {
+    background-color: $colorPrimaryDark !important;
+    color: $colorBackgroundDark1 !important;
+  }
+
+  .list {
+    width: fit-content;
+    border: 1px solid $colorBorder;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+    background-color: $colorBackground;
+    right: 0;
+    bottom: -5px;
+    transform: translate(0, 100%);
+    padding: 3px 0;
+  }
+  
+  .option {
+    font-size: 1.4rem;
+    user-select: none;
+    padding: 8px 20px;
+    white-space: nowrap;
+    transition: background-color .3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $colorBackgroundDark1;
+    }
+
+    &:active {
+      background-color: $colorPrimaryLight3;
+    }
+
+    &.blocked {
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

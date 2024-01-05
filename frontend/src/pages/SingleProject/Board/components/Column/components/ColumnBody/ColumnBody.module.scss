@@ -1,0 +1,98 @@
+@import "../../../../../../../theme/variables.scss";
+@import "../../../../../../../theme/mixins.scss";
+
+.column-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 5px 0;
+  gap: 5px;
+
+  &:hover {
+    .add-task {
+      visibility: visible;
+    }
+  }
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    margin-bottom: 5px;
+  }
+}
+
+.add-task-block {
+  padding: 2px 5px;
+  position: sticky;
+  top: 55px;
+
+  .add-task {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 1.4rem;
+    transition: background-color ease .3s;
+    height: 36px;
+    display: flex;
+    color: $colorContent;
+    align-items: center;
+    border-radius: 3px;
+    border: none;
+    visibility: hidden;
+  
+    &:hover {
+      cursor: pointer;
+      background-color: $colorBackgroundDark2;
+    }
+  
+    &:active {
+      background-color: $colorPrimaryLight2;
+    }
+
+    &:disabled {
+      background-color: $colorBackgroundDark2;
+      color: $colorContentLight1;
+    }
+
+    @include mediaTablet {
+      visibility: visible;
+    }
+  }
+
+  .new-task {
+    border: 3px solid $colorPrimaryLight1;
+    border-radius: 5px;
+    background-color: $colorBackground;
+    padding: 5px;
+    position: relative;
+  }
+
+  .textarea {
+    outline: none;
+    height: 35px;
+    width: 100%;
+    border: none;
+    resize: none;
+    padding: 3px;
+    font-size: 1.4rem;
+  }
+
+  .error-message {
+    font-size: 1.2rem;
+    color: $colorError;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .block-loader {
+    border-radius: 5px;
+    @include preloader-block();
+  }
+}

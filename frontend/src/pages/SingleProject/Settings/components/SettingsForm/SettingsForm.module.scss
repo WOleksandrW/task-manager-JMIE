@@ -1,0 +1,68 @@
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+  margin: 0 auto;
+
+  @include mediaTablet {
+    gap: 10px;
+  }
+
+  @include mediaMobile {
+    width: 100%;
+    gap: 8px;
+  }
+}
+
+.project-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  .changed {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.changed {
+  font-size: 1.2rem;
+  color: $colorStarNotedActive;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-loader {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $colorIconDone;
+  font-size: 2.5rem;
+}
+
+.cancel {
+  margin-left: auto;
+}

@@ -1,0 +1,32 @@
+@import "../../theme/variables.scss";
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 6px;
+  border: 2px solid $colorBorderLight1;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.4rem;
+  color: $colorContent;
+  background-color: $colorBackground;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+
+  &:hover {
+    background-color: $colorBackgroundDark1;
+  }
+
+  &:focus {
+    border-color: $colorPrimary;
+    background-color: $colorBackground;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $colorBackgroundDark1 !important;
+  }
+
+  &.invalid {
+    border-color: $colorError !important;
+  }
+}

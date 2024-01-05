@@ -1,0 +1,12 @@
+@import "../../theme/variables.scss";
+
+.box {
+  width: auto;
+  background-color: $colorBackground;
+  box-shadow: $boxShadow;
+  white-space: nowrap;
+
+  & > * {
+    white-space: nowrap;
+  }
+}

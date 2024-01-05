@@ -1,0 +1,51 @@
+@import "../../../../../../theme/variables.scss";
+
+.project {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  column-gap: 10px;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $colorBackgroundDark2;
+  }
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.6rem;
+}
+
+.action-block {
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-note {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.star {
+  color: $colorStarNoted;
+  transition: color .3s ease;
+
+  &:hover {
+    color: $colorStarNotedHover;
+  }
+
+  &.active {
+    color: $colorStarNotedActive;
+  }
+}

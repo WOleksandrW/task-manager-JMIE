@@ -1,0 +1,40 @@
+@import "../../theme/variables.scss";
+
+.button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  color: $colorContent;
+  background-color: $colorBackgroundDark1;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  
+  &:hover {
+    background-color: $colorBackgroundDark2;
+  }
+
+  &.primary {
+    color: $colorContentAlternative;
+    background-color: $colorPrimary;
+
+    &:hover {
+      background-color: $colorPrimaryLight1;
+    }
+  }
+
+  &.danger {
+    color: $colorContentAlternative;
+    background-color: $colorErrorDark;
+
+    &:hover {
+      background-color: $colorErrorLight;
+    }
+  }
+
+  &:disabled {
+    color: $colorContentLight2;
+    background-color: $colorBackgroundDark2 !important;
+    cursor: not-allowed;
+  }
+}

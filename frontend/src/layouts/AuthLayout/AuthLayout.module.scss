@@ -1,0 +1,16 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.content {
+  height: calc(100vh - $heightHeader - $heightFooter);
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include mediaMobile {
+    height: calc(100vh - $heightHeader - $heightFooterMobile);
+  }
+}

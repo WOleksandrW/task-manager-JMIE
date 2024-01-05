@@ -1,0 +1,59 @@
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.column-list-container {
+  height: 100%;
+  width: 100%;
+
+  @include scrollbar();
+}
+
+.column-list {
+  display: flex;
+  width: fit-content;
+  min-width: 100%;
+  min-height: 100%;
+
+  .multi-list-block {
+    display: flex;
+    flex-direction: column;
+
+    .last-list {
+      flex: 1 1;
+    }
+  }
+
+  .list {
+    display: flex;
+    
+    & > * {
+      margin: 0 6px;
+    }
+
+    &.sticky {
+      position: sticky;
+      top: 0;
+      z-index: 15;
+    }
+  }
+
+  .last-column {
+    margin: 0 12px;
+  }
+
+  .column-block {
+    color: inherit;
+  }
+
+  .btn-add-container {
+    padding: 0 10px;
+    position: relative;
+    z-index: 15;
+    margin-right: auto;
+  }
+
+  .btn-add {
+    position: sticky;
+    top: 0;
+  }
+}

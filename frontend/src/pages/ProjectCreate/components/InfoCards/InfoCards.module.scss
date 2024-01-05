@@ -1,0 +1,32 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $colorBackgroundDark1;
+
+  @include mediaMobile {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include mediaMobile {
+    gap: 5px;
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  stroke-width: 500;
+  color: $colorContent;
+}

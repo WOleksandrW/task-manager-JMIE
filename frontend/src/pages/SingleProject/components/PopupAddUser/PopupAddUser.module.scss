@@ -1,0 +1,81 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 350px;
+
+  @include mediaMobile {
+    width: 300px;
+    padding: 15px;
+    gap: 10px;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .user {
+    background-color: $colorBackgroundDark1;
+  }
+
+  .form {
+    width: 100%;
+    position: relative;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .input {
+    padding-right: 40px;
+    height: 40px;
+  }
+
+  .loader {
+    margin: 5px;
+  }
+
+  .user-list {
+    position: absolute;
+    border: 1px solid $colorBorder;
+    background-color: $colorBackground;
+    padding: 3px 0;
+    width: 100%;
+    bottom: -5px;
+    transform: translate(0, 100%);
+    border-radius: 5px;
+
+    @include scrollbar($maxHeight: 200px);
+  }
+
+  .not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 1.6rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,0 +1,77 @@
+@import "../../../../theme/variables.scss";
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.padding {
+  padding: 0 20px;
+}
+
+.title {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  column-gap: 15px;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $colorBackgroundDark2;
+  }
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-name,
+.email {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.full-name {
+  font-size: 1.6rem;
+}
+
+.email {
+  font-size: 1.2rem;
+  color: $colorContentLight1;
+}
+
+.hr {
+  width: 100%;
+  border: 1px solid $colorBorderLight1;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: background-color .3s ease;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: $colorBackgroundDark2;
+  }
+}

@@ -1,0 +1,114 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins";
+
+.footer {
+  height: $heightFooter;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    height: 4px;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    left: 0;
+    background: $linearGradient;
+    transform: rotateZ(180deg);
+    content: "";
+  }
+
+  @include mediaMobile {
+    height: $heightFooterMobile;
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: $maxWidth;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mediaMobile {
+    flex-direction: column;
+    height: 100%;
+    padding: 4px 20px;
+  }
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  background-image: url("../../assets/icons/sloth.png");
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title-letter {
+  font-size: 3rem;
+  line-height: 110%;
+  color: $colorPrimary;
+  margin-left: 5px;
+}
+
+.socials-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.block-title {
+  font-size: 1.8rem;
+}
+
+.social {
+  font-size: 2.5rem;
+  color: $colorContent;
+
+  &-link {
+    display: flex;
+    transition: color .3s ease,
+                outline-color .3s ease,
+                outline-offset .2s ease;
+    outline-color: transparent;
+    outline-width: 3px;
+    outline-offset: -50px;
+    outline-style: solid;
+    border-radius: 3px;
+
+    &:hover {
+      color: $colorPrimary;
+      outline-color: $colorPrimary;
+      outline-offset: 1px;
+    }
+
+    &:active {
+      color: $colorPrimaryDark;
+      outline-color: $colorPrimaryDark;
+      outline-offset: -1px;
+    }
+  }
+}

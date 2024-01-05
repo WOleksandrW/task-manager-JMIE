@@ -1,0 +1,81 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.select-panel {
+  position: relative;
+
+  .select {
+    height: 32px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $colorContent;
+    background-color: $colorBackgroundDark1;
+    transition: background-color ease .3s;
+    border-radius: 5px;
+    font-size: 1.4rem;
+
+    .text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $colorBackgroundDark2;
+    }
+
+    &.accent {
+      background-color: $colorPrimary;
+      color: $colorContentAlternative;
+
+      &:hover {
+        background-color: $colorPrimaryLight1;
+      }
+    }
+  }
+
+  .option-list {
+    font-size: 1.4rem;
+    border: 1px solid $colorBorder;
+    border-radius: 5px;
+    position: absolute;
+    background-color: $colorBackground;
+    right: 0;
+    bottom: -5px;
+    transform: translate(0, 100%);
+    padding: 3px 0;
+    
+    @include scrollbar($maxHeight: 200px, $maxWidth: 250px);
+  }
+
+  .option {
+    padding: 8px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $colorBackgroundDark1;
+    }
+
+    &:active {
+      background-color: $colorPrimaryLight3;
+    }
+  }
+
+  .empty-message {
+    padding: 8px 20px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.popup {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include mediaTablet {
+    width: 400px;
+  }
+  
+  @include mediaMobile {
+    width: 300px;
+    padding: 15px;
+    gap: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.close-btn {
+  margin-left: auto;
+}
+
+.description {
+  line-height: 130%;
+  font-size: 1.6rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}

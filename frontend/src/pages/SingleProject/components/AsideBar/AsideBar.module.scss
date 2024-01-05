@@ -1,0 +1,140 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.aside-bar {
+  position: relative;
+  min-width: $widthAsideBarNormal;
+  max-width: $widthAsideBarNormal;
+  padding: 24px 8px;
+  border-right: 2px solid $colorBorderLight1;
+  background-color: $colorBackground;
+  transition: all 0.25s ease;
+
+  .button {
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    .button {
+      display: flex;
+    }
+  }
+
+  &.collapsed {
+    min-width: $widthAsideBarHidden;
+    max-width: $widthAsideBarHidden;
+    width: 10px;
+  
+    .project,
+    .navigation {
+      display: none;
+    }
+  
+    .button {
+      display: flex;
+    }
+  }
+
+  @include mediaTablet {
+    position: absolute;
+    z-index: 22;
+    height: 100%;
+  }
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 16px;
+  border-bottom: 2px solid $colorBorderLight1;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .title,
+  .description {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: $colorContent;
+  }
+  
+  .description {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $colorContentLight1;
+  }
+}
+
+.navigation {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-title {
+  padding: 0 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorContent;
+}
+
+.nav-list {
+  position: relative;
+}
+
+.active-bar {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $colorPrimary;
+  transform: translateY(-50%);
+  transition: top .3s ease, height .3s ease;
+}
+
+.button {
+  position: absolute;
+  top: 30px;
+  right: -12px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $colorBackground;
+  border: 1px solid $colorBorderLight1;
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  & > * {
+    color: $colorContent;
+  }
+
+  &:hover {
+    background-color: $colorPrimary;
+
+    & > * {
+      color: $colorBackground;
+    }
+  }
+
+  @include mediaTablet {
+    display: flex;
+  }
+}

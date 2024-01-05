@@ -1,0 +1,79 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.cover-block {
+  height: 200px;
+  width: 100%;
+  position: relative;
+
+  &:hover .control-panel {
+    opacity: 1;
+  }
+
+  &::after {
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: $linearGradient;
+    transform: rotateZ(180deg);
+    content: "";
+  }
+
+  @include mediaMobile {
+    height: 150px;
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-panel {
+  position: absolute;
+  background-color: $colorOverlayBack; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  color: $colorContentAlternative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  @include mediaMobile {
+    padding-left: 70px;
+  }
+}
+
+.label {
+  position: relative;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 200ms ease all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.image-input {
+  display: none;
+}
+
+.color-input {
+  position: absolute;
+  opacity: 0;
+  top: -30px;
+  cursor: pointer;
+}

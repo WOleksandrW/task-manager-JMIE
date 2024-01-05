@@ -1,0 +1,48 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.info-card {
+  display: flex;
+  border-radius: 8px;
+  border: 2px solid $colorBorderLight1;
+  background-color: $colorBackground;
+  overflow: hidden;
+}
+
+.picture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 25%;
+  padding: 20px;
+  background-color: $colorBackgroundDark1;
+
+  @include mediaMobile {
+    padding: 10px;
+  }
+}
+
+.picture {
+  width: 80%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 5px;
+  padding: 5px 15px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $colorContent;
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $colorContentLight1;
+}

@@ -1,0 +1,48 @@
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.table-data {
+  position: relative;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $colorBackgroundDark1;
+  }
+}
+
+.data {
+  padding: 12px 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $colorContent;
+
+  @include mediaMobile {
+    padding: 8px 4px;
+  }
+}
+
+.data-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.remove {
+  color: $colorPrimary;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.preloader {
+  @include preloader-block();
+}

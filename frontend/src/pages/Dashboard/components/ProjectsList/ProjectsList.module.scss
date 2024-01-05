@@ -1,0 +1,9 @@
+@import "../../../../theme/mixins.scss";
+
+.list {
+  display: flex;
+  gap: 12px;
+  padding: 5px;
+
+  @include scrollbar();
+}

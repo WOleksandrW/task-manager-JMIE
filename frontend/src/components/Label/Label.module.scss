@@ -1,0 +1,11 @@
+@import "../../theme/variables.scss";
+
+.label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $colorContentLight1;
+}
+
+.required {
+  color: $colorError;
+}

@@ -1,0 +1,75 @@
+@import "../../../../../theme/variables.scss";
+
+.comment-item {
+  display: flex;
+  gap: 5px;
+}
+
+.avatar {
+  margin: 5px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment-header {
+  display: flex;
+  gap: 10px;
+
+  .user-name {
+    color: $colorContent;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .time {
+    font-size: 1.4rem;
+    color: $colorContentLight1;
+    position: relative;
+    cursor: default;
+  
+    &:hover::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      margin-bottom: 15px;
+      bottom: 5px;
+      padding: 10px;
+      width: 200px;
+      font-size: 1.4rem;
+      color: $colorContentAlternative;
+      text-align: center;
+      background-color: $colorPrimary;
+      border-radius: 5px;
+      z-index: 22;
+      content: attr(data-title);
+    }
+  }
+}
+
+.comment-footer {
+  display: flex;
+  gap: 20px;
+
+  .button {
+    background-color: $colorBackground;
+    color: $colorContent;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: $colorPrimary;
+    }
+
+    &:active {
+      color: $colorPrimaryDark;
+    }
+  }
+}

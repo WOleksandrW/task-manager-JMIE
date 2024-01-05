@@ -1,0 +1,77 @@
+@import "../../../../../theme/variables.scss";
+@import "../../../../../theme/mixins.scss";
+
+.input-wrapper {
+  position: relative;
+  width: 300px;
+
+  @include mediaMobileMedium {
+    width: 240px;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: $colorContentLight1;
+  cursor: text;
+}
+
+.table-wrapper {
+  @include scrollbar();
+}
+
+.table {
+  width: 100%;
+  border-bottom: 2px solid $colorBorderLight1;
+  border-spacing: 0;
+}
+
+.row-header {
+  & > * {
+    padding: 4px 8px;
+    border-bottom: 2px solid $colorBorderLight1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+    color: $colorContentLight1;
+    user-select: none;
+  }
+
+  .name,
+  .email {
+    cursor: pointer;
+    transition: background-color .2s ease;
+
+    &:hover {
+      background-color: $colorBackgroundDark1;
+    }
+  }
+
+  .name,
+  .email,
+  .role {
+    width: 30%;
+  }
+
+  .remove {
+    width: 10%;
+  }
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+.preloader {
+  padding: 50px 0;
+}

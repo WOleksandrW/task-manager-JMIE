@@ -1,0 +1,21 @@
+@import "../../theme/variables.scss";
+
+.empty-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon,
+.text {
+  color: $colorContentLight1;
+}
+
+.icon {
+  font-size: 2.4rem;
+}
+
+.text {
+  font-size: 1.6rem;
+}

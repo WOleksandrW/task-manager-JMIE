@@ -1,0 +1,20 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.alerts-container {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @include mediaMobile {
+    top: 0;
+    right: initial;
+    left: 0;
+    gap: 0;
+    width: 100%;
+  }
+}

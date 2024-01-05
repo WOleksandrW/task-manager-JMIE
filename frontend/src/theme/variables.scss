@@ -1,0 +1,93 @@
+$colorContent: #000000;
+$colorContentLight1: #6C6C6C;
+$colorContentLight2: #8D8D8D;
+$colorContentAlternative: #FFFFFF;
+
+$colorBackground: #FFFFFF;
+$colorBackgroundDark1: #F0F0F0;
+$colorBackgroundDark2: #DFDFDF;
+
+$colorPrimary: #FF8000;
+$colorPrimaryDark: #D16800;
+$colorPrimaryLight1: #FFA348;
+$colorPrimaryLight2: #FFE0C2;
+$colorPrimaryLight3: #FFEFDE;
+
+$colorBorder: #8A8A8A;
+$colorBorderLight1:#DEDEDE;
+
+$colorError: #FF0000;
+$colorErrorDark: #DE0B0B;
+$colorErrorLight: #FF3030;
+
+// Icons
+$colorIconDone: #00875A;
+$colorIconTask: #4CADE8;
+
+// Display
+$colorDisplayLink: #0065FF;
+
+// Mixins
+$colorPreloaderBack: rgba(255, 255, 255, 0.7);
+$colorScrollbarThumbBack: #888888;
+$colorScrollbarThumbBackHover: #555555;
+
+// Stars
+$colorStarNoted: #808080;
+$colorStarNotedHover: #000000;
+$colorStarNotedActive: #FFAB00;
+
+// Alert
+$colorAlertError: #5F2120;
+$colorAlertInfo: #014361;
+$colorAlertSuccess: #1E4620;
+$colorAlertWarning: #5F2120;
+$colorAlertErrorIcon: #D32F2F;
+$colorAlertInfoIcon: #0288D1;
+$colorAlertSuccessIcon: #2E7D32;
+$colorAlertWarningIcon: #ED6C02;
+$colorAlertErrorBack: #FDEDED;
+$colorAlertInfoBack: #E5F6FD;
+$colorAlertSuccessBack: #EDF7ED;
+$colorAlertWarningBack: #FDEDED;
+
+// Title (prompt)
+$colorTitleContent: #FFFFFF;
+$colorTitleBack: #000000;
+
+// Overlay
+$colorOverlayBack: rgba(0, 0, 0, 0.5);
+
+// UserAvatar
+$colorUserAvatarLight: #FFFFFF;
+$colorUserAvatarDark: #000000;
+
+// AsideBar
+$widthAsideBarNormal: 238px;
+$widthAsideBarHidden: 20px;
+
+// Shadows
+$boxShadow: 0 4px 8px -2px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.31);
+$boxShadowItem: 0 0 2px 2px $colorBorderLight1;
+$boxShadowItemHover: 0 0 5px 4px $colorBorderLight1;
+
+$linearGradient: linear-gradient(
+  rgba(9, 30, 66, 0.13) 0px,
+  rgba(9, 30, 66, 0.13) 1px,
+  rgba(9, 30, 66, 0.08) 1px,
+  rgba(9, 30, 66, 0) 4px
+);
+
+// Media variables
+$widthMediaDesktopSmall: 1023px;
+$widthMediaTablet: 767px;
+$widthMediaMobile: 479px;
+$widthMediaMobileMedium: 374px;
+
+// Sizes of layouts
+$maxWidth: 1440px;
+
+$heightHeader: 53px;
+$heightFooter: 53px;
+
+$heightFooterMobile: 58px;

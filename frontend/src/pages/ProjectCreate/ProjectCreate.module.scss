@@ -1,0 +1,102 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.project-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1;
+  padding: 20px 40px;
+
+  @include mediaDesktopSmall {
+    padding: 15px 30px;
+  }
+
+  @include mediaMobile {
+    padding: 10px;
+  }
+}
+
+.content {
+  flex: 0 1 900px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include mediaDesktopSmall {
+    max-width: none;
+  }
+
+  @include mediaMobile {
+    gap: 10px;
+  }
+
+  @include mediaMobileMedium {
+    gap: 8px;
+  }
+}
+
+.row {
+  display: flex;
+  column-gap: 60px;
+
+  @include mediaTablet {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  @include mediaMobile {
+    row-gap: 10px;
+  }
+
+  @include mediaMobileMedium {
+    row-gap: 8px;
+  }
+}
+
+.project-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @include mediaTablet {
+    width: 100%;
+  }
+}
+
+.info-cards {
+  flex: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $colorContent;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $colorContent;
+}
+
+.hr {
+  border: 1px solid $colorBorderLight1;
+
+  @include mediaMobile {
+    display: none;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.preloader {
+  @include preloader-block();
+}

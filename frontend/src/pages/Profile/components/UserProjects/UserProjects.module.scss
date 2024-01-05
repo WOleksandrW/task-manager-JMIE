@@ -1,0 +1,58 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.user-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include mediaTablet {
+    gap: 20px;
+  }
+
+  @include mediaMobile {
+    gap: 10px;
+  }
+}
+
+.list-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mediaTablet {
+    gap: 10px;
+  }
+
+  @include mediaMobile {
+    gap: 5px;
+  }
+}
+
+.title {
+  color: $colorContent;
+  font-size: 1.9rem;
+  font-style: inherit;
+  line-height: 1.16667;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  word-break: break-all;
+}
+
+.list {
+  background-color: $colorBackgroundDark1;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.empty {
+  padding: 25px 0;
+  font-size: 1.6rem;
+
+  @include mediaMobile {
+    padding: 15px 0;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../theme/variables.scss";
+@import "../../theme/mixins.scss";
+
+.wrapper {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+
+  @include mediaMobile {
+    gap: 5px;
+  }
+
+  .code {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    line-height: 0.8;
+    font-size: 50rem;
+    color: $colorContent;
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+    user-select: none;
+
+    @include mediaDesktopSmall {
+      font-size: 40rem;
+    }
+
+    @include mediaTablet {
+      font-size: 30rem;
+    }
+
+    @include mediaMobile {
+      font-size: 22rem;
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+    color: $colorContent;
+    user-select: none;
+    text-align: center;
+
+    @include mediaMobile {
+      font-size: 2.5rem;
+    }
+  }
+
+  .title,
+  .link {
+    position: relative;
+    z-index: 2;
+  }
+
+  .link {
+    width: fit-content;
+  }
+}

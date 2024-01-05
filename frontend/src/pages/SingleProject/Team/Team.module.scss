@@ -1,0 +1,46 @@
+@import "../../../theme/variables.scss";
+@import "../../../theme/mixins.scss";
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $colorContent;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: $colorContentAlternative;
+  background-color: $colorPrimary;
+}
+
+.message {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $colorContentLight1;
+}
+
+.marked {
+  color: $colorPrimary;
+  text-decoration: underline;
+}

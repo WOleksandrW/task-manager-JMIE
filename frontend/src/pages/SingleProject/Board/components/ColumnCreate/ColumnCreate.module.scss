@@ -1,0 +1,44 @@
+@import "../../../../../theme/variables.scss";
+
+.column {
+  border-radius: 3px;
+  background-color: $colorBackgroundDark1;
+  height: 100%;
+  width: 282px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  height: 50px;
+  padding: 4px 5px;
+  background-color: $colorBackgroundDark1;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  position: sticky;
+  z-index: 15;
+  top: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    height: 2px;
+    width: 100%;
+    background-color: $colorBackgroundDark2;
+  }
+}
+
+.editable-form-container {
+  width: 100%;
+}
+
+.editable-form {
+  height: 46px;
+}
+
+.editable-text {
+  text-transform: uppercase;
+}

@@ -1,0 +1,6 @@
+const TITLE_MIN_LENGTH = 3;
+const DESCRIPTION_MIN_LENGTH = 8;
+const KEY_LENGTH = 3;
+const KEY_REGEX = new RegExp('^[A-Z]+$');
+
+export default { TITLE_MIN_LENGTH, DESCRIPTION_MIN_LENGTH, KEY_LENGTH, KEY_REGEX };

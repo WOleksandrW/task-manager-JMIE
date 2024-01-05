@@ -1,0 +1,57 @@
+@import "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+.project-item {
+  border-radius: 5px;
+}
+
+.link {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: $colorContent;
+  transition: color .2s ease;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+
+  @include mediaMobile {
+    padding: 10px;
+  }
+}
+
+.project-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  max-width: 400px;
+
+  @include mediaDesktopSmall {
+    max-width: 300px;
+  }
+
+  @include mediaMobile {
+    max-width: 250px;
+  }
+
+  @include mediaMobileMedium {
+    max-width: 190px;
+  }
+}
+
+.title {
+  font-size: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.key {
+  font-size: 1.2rem;
+}
